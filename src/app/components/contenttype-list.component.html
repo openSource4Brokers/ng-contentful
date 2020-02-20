@@ -1,0 +1,15 @@
+<div class="container mt-3">
+  <div>
+    <div class="alert alert-info" role="alert" *ngFor="let contenttype of contentTypeList$ | async">
+      <div class="d-flex flex-wrap flex-xl-nowrap flex-lg-nowrap flex-md-nowrap">
+        <div class="p-2">
+          <h4> {{ contenttype.name }} </h4>
+          <i> {{ contenttype.sys.id }} </i>
+        </div>
+      </div>
+      <div class="p-2">
+        <button (click)="goToContentListPage(contenttype.sys.id)" class="btn btn-info">This cTypeList</button>
+      </div>
+    </div>
+  </div>
+</div>
