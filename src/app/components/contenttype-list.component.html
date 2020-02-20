@@ -3,12 +3,12 @@
     <div class="alert alert-info" role="alert" *ngFor="let contenttype of contentTypeList$ | async">
       <div class="d-flex flex-wrap flex-xl-nowrap flex-lg-nowrap flex-md-nowrap">
         <div class="p-2">
-          <h4> {{ contenttype.name }} </h4>
-          <i> {{ contenttype.sys.id }} </i>
+          <h5> {{ contenttype.name }} </h5>
+          <i> {{ contenttype.description }} </i>
         </div>
       </div>
       <div class="p-2">
-        <button (click)="goToContentListPage(contenttype.sys.id)" class="btn btn-info">This cTypeList</button>
+        <button (click)="goToContentListPage(contenttype.sys.id)" class="btn btn-info">{{ contenttype.sys.id }}</button>
       </div>
     </div>
   </div>

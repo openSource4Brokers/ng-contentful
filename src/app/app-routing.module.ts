@@ -1,3 +1,4 @@
+import { CourseListComponent } from './components/course-list/course-list.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -7,7 +8,8 @@ import { CompanytListComponent } from './components/company-list/company-list.co
 const routes: Routes = [
   { path: '', redirectTo: '/contenttypes', pathMatch: 'full' },
   { path: 'contenttypes', component: ContentTypeListComponent },
-  { path: 'insuranceCompanies', component: CompanytListComponent }
+  { path: 'insuranceCompanies', component: CompanytListComponent },
+  { path: 'courses', component: CourseListComponent }
 ];
 
 @NgModule({

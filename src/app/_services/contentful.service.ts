@@ -25,7 +25,7 @@ export class ContentfulService {
   }
 
   consoleLogContentTypes() {
-    // console.log('ContentTypeArray (Only for development purpose)');
+    console.log('ContentTypeArray (Only for development purpose)');
     this.client
       .getContentTypes()
       .then(response => console.log(response.items))

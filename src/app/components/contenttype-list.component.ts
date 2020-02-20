@@ -19,7 +19,6 @@ export class ContentTypeListComponent implements OnInit {
 
   ngOnInit() {
     this.contentTypeList$ = this.contentfulService.getContentTypes();
-
     // Only for development purpose
     this.contentfulService.consoleLogContentTypes();
   }

@@ -1,3 +1,4 @@
+import { CourseListComponent } from './components/course-list/course-list.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -15,6 +16,7 @@ import { CompanytListComponent } from './components/company-list/company-list.co
     AppComponent,
     ContentTypeListComponent,
     CompanytListComponent,
+    CourseListComponent,
     MdToHtmlPipe
   ],
   imports: [BrowserModule, AppRoutingModule],
