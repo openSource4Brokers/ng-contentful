@@ -17,9 +17,7 @@
 ## NPM packages used for this app
 
 - [bootstrap](https://www.npmjs.com/package/bootstrap): `npm i bootstrap`
-- [jquery](https://www.npmjs.com/package/jquery): `npm i jquery`
 
-- Or install all packages in one commandline: `npm i bootstrap jquery`
 
 ## styles.scss
 
