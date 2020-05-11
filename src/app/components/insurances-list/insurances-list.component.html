@@ -1,5 +1,6 @@
 <div class="container mt-3">
   <div>
+    <button (click)="goBack()" class="btn btn-danger mb-3">Back To ContentTypes</button>
     <div class="alert alert-info" role="alert" *ngFor="let e of entriesList | async">
       <div class="d-flex flex-wrap flex-xl-nowrap flex-lg-nowrap flex-md-nowrap">
         <div class="p-2">
