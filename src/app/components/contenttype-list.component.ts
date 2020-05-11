@@ -10,7 +10,7 @@ import { ContentfulService } from '../_services/contentful.service';
   styleUrls: ['./contenttype-list.component.scss']
 })
 export class ContentTypeListComponent implements OnInit {
-  contentTypeList$: Observable<any>;
+  contentTypeList: Observable<any>;
 
   constructor(
     private router: Router,
@@ -18,12 +18,13 @@ export class ContentTypeListComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.contentTypeList$ = this.contentfulService.getContentTypes();
+    this.contentTypeList = this.contentfulService.getContentTypes();
+
     // Only for development purpose
     this.contentfulService.consoleLogContentTypes();
   }
 
-  goToContentListPage(contentListId) {
+  goToContentListPage(contentListId: string) {
     this.router.navigate(['/' + contentListId]);
   }
 }

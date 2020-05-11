@@ -1,14 +1,14 @@
 <div class="container mt-3">
   <div>
-    <div class="alert alert-info" role="alert" *ngFor="let contenttype of contentTypeList$ | async">
+    <div class="alert alert-info" role="alert" *ngFor="let c of contentTypeList | async">
       <div class="d-flex flex-wrap flex-xl-nowrap flex-lg-nowrap flex-md-nowrap">
         <div class="p-2">
-          <h5> {{ contenttype.name }} </h5>
-          <i> {{ contenttype.description }} </i>
+          <h5> {{ c.name }} </h5>
+          <i> {{ c.description }} </i>
         </div>
       </div>
       <div class="p-2">
-        <button (click)="goToContentListPage(contenttype.sys.id)" class="btn btn-info">{{ contenttype.sys.id }}</button>
+        <button (click)="goToContentListPage(c.sys.id)" class="btn btn-info">{{ c.sys.id }}</button>
       </div>
     </div>
   </div>

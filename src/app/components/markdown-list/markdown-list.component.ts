@@ -5,27 +5,27 @@ import { Observable } from 'rxjs';
 import { ContentfulService } from './../../_services/contentful.service';
 
 @Component({
-  selector: 'app-course-list',
-  templateUrl: './course-list.component.html',
-  styleUrls: ['./course-list.component.css']
+  selector: 'app-markdown-list',
+  templateUrl: './markdown-list.component.html',
+  styleUrls: ['./markdown-list.component.css']
 })
-export class CourseListComponent implements OnInit {
+export class MarkdownListComponent implements OnInit {
   entriesList: Observable<any>;
 
   constructor(
     private router: Router,
     private cfService: ContentfulService
-  ) {}
+  ) { }
 
   ngOnInit() {
-    this.entriesList = this.cfService.getContentList('courses');
+    this.entriesList = this.cfService.getContentList('markdown');
 
     // Only for development purpose
-    this.cfService.consoleLogContentList('courses');
+    this.cfService.consoleLogContentList('markdown');
   }
 
-  courseDetail(courseId: string) {
-    this.router.navigate(['/courses', courseId]);
+  markdownDetail(markdownId: string) {
+    this.router.navigate(['/markdown', markdownId]);
   }
 
   goBack() {

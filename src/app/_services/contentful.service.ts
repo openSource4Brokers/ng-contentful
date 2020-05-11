@@ -1,9 +1,7 @@
-// Angular
 import { Injectable } from '@angular/core';
 import { from } from 'rxjs';
-// npm installed
+
 import { createClient, Entry } from 'contentful';
-// ours
 import { environment } from '../../environments/environment';
 
 @Injectable({
@@ -24,14 +22,6 @@ export class ContentfulService {
     return myContentObservable;
   }
 
-  consoleLogContentTypes() {
-    console.log('ContentTypeArray (Only for development purpose)');
-    this.client
-      .getContentTypes()
-      .then(response => console.log(response.items))
-      .catch(console.error);
-  }
-
   getContentList(cType: string, query?: object) {
     const myListObservable = from(
       this.client
@@ -46,6 +36,19 @@ export class ContentfulService {
         .then(res => res.items)
     );
     return myListObservable;
+  }
+
+  getContentDetail(contentId: string) {
+    const myContentObservable = from(this.client.getEntry(contentId));
+    return myContentObservable;
+  }
+
+  consoleLogContentTypes() {
+    console.log('ContentTypeArray (Only for development purpose)');
+    this.client
+      .getContentTypes()
+      .then(response => console.log(response.items))
+      .catch(console.error);
   }
 
   consoleLogContentList(cType: string, query?: object) {
@@ -63,8 +66,10 @@ export class ContentfulService {
       .catch(console.error);
   }
 
-  getContent(contentId) {
-    const myContentObservable = from(this.client.getEntry(contentId));
-    return myContentObservable;
+  consoleLogContentDetail(contentId: string) {
+    this.client
+      .getEntry(contentId)
+      .then(entry => console.log(entry))
+      .catch(err => console.log(err));
   }
 }

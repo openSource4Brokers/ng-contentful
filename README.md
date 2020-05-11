@@ -14,9 +14,14 @@
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Angular CLI](https://www.npmjs.com/package/@angular/cli): `npm i -g @angular/cli`
 
+
 ## NPM packages used for this app
 
 - [bootstrap](https://www.npmjs.com/package/bootstrap): `npm i bootstrap`
+- [contentful](https://www.npmjs.com/package/contentful): `npm i contentful`
+- [marked](https://www.npmjs.com/package/marked): `npm i contentful`
+
+- install all packages in one commandline: `npm i bootstrap contentful`
 
 
 ## styles.scss
@@ -39,7 +44,7 @@ update to latest Angular 9:
 `ng update @angular/cli@9 @angular/core@9`
 Follow the instructions eventualy for fixes
 
-if your app is Angular 7 or less, you better first upgrade to latest Angular 8
+if your app is Angular 7 or less, best first upgrade to latest Angular 8
 
 update to latest Angular 8:
 `ng update @angular/cli@8 @angular/core@8`

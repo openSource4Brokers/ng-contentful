@@ -10,7 +10,7 @@ import { ContentfulService } from '../../_services/contentful.service';
   styleUrls: ['./company-list.component.scss']
 })
 export class CompanytListComponent implements OnInit {
-  entriesList$: Observable<any>;
+  entriesList: Observable<any>;
 
   constructor(
     private router: Router,
@@ -18,7 +18,7 @@ export class CompanytListComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.entriesList$ = this.contentfulService.getContentList(
+    this.entriesList = this.contentfulService.getContentList(
       'insuranceCompanies'
     );
 
@@ -26,7 +26,7 @@ export class CompanytListComponent implements OnInit {
     this.contentfulService.consoleLogContentList('insuranceCompanies');
   }
 
-  goToList() {
+  goBack() {
     this.router.navigate(['/contenttypes']);
   }
 }
