@@ -14,7 +14,6 @@
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Angular CLI](https://www.npmjs.com/package/@angular/cli): `npm i -g @angular/cli`
 
-
 ## NPM packages used for this app
 
 - [bootstrap](https://www.npmjs.com/package/bootstrap): `npm i bootstrap`
@@ -22,7 +21,6 @@
 - [marked](https://www.npmjs.com/package/marked): `npm i contentful`
 
 - install all packages in one commandline: `npm i bootstrap contentful`
-
 
 ## styles.scss
 
@@ -35,7 +33,7 @@ html {
 }
 ```
 
-## Updating Angular 8 to 9
+## Updating Angular 9
 
 This app is on a version of Angular 9.
 Before starting an update to latest version of 9, you have to commit first
@@ -44,10 +42,7 @@ update to latest Angular 9:
 `ng update @angular/cli@9 @angular/core@9`
 Follow the instructions eventualy for fixes
 
-if your app is Angular 7 or less, best first upgrade to latest Angular 8
+if your app is Angular 7 or less, best first upgrade to latest Angular 8 and test it
 
 update to latest Angular 8:
 `ng update @angular/cli@8 @angular/core@8`
-
-
-
