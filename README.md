@@ -1,11 +1,13 @@
 # ng-contentful
 
-- [Use Contentful](https://be.contentful.com) as your prefered content supplier for all your projects
+[Use Contentful](https://be.contentful.com) as your prefered content supplier for all your projects
+
+[Sebastian Eschweiler Youtube tutorial](https://www.youtube.com/watch?v=KhmjLjvlmyQ) is a good starting point to learn implementing contenful in Angular projects.
 
 ## Getting started for developers
 
 - [Install NodeJS](https://nodejs.org/). Hint: eventually install and use [nvm](https://medium.com/@Joachim8675309/installing-node-js-with-nvm-4dc469c977d9) for easy installing and/or switching between node versions
-- Clone this repository: `git clone https://github.com/JosVermoesen/ng-contentful.git`.
+- Clone this repository: `git clone https://github.com/openSource4Brokers/ng-contentful.git`
 - Run `npm install` inside the project root.
 - Run `ng serve` in a terminal from the project root.
 - Profit. :tada:
@@ -28,23 +30,33 @@
 
 For use of bootstrap, add also into your global styles.scss:
 
-```
+```bash
 @import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 html {
   font-size: 14px;
 }
 ```
 
-## Updating Angular 9
+## warnings for contentful
 
-This app is on a version of Angular 9.
-Before starting an update to latest version of 9, you have to commit first
+In angular.json, to avoid CommonJs warnings, add **allowedCommonJsDependencies** in the options section for **axios and marked**:
 
-update to latest Angular 9:
-`ng update @angular/cli@9 @angular/core@9`
+```bash
+"builder": "@angular-devkit/build-angular:browser",
+          "options": {
+
+            "allowedCommonJsDependencies": [
+              "axios",
+              "marked"
+            ],
+
+```
+
+## Updating Angular 10
+
+This app is on a version of Angular 10.
+Before starting an update to latest version of 10, you have to commit first
+
+update to latest Angular:
+`ng update @angular/cli@10 @angular/core@10`
 Follow the instructions eventualy for fixes
-
-if your app is Angular 7 or less, best first upgrade to latest Angular 8 and test it
-
-update to latest Angular 8:
-`ng update @angular/cli@8 @angular/core@8`
