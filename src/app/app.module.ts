@@ -15,22 +15,27 @@ import { CompanytListComponent } from './components/company-list/company-list.co
 import { MarkdownListComponent } from './components/markdown-list/markdown-list.component';
 import { MarkdownDetailComponent } from './components/markdown-list/markdown-detail/markdown-detail.component';
 import { InsuranceDetailComponent } from './components/insurances-list/insurance-detail/insurance-detail.component';
+import { JournalDetailComponent } from './components/journals-list/journal-detail/journal-detail.component';
+import { JournalsListComponent } from './components/journals-list/journals-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContentTypeListComponent,
-    CompanytListComponent,
-    CourseListComponent,
-    CourseDetailComponent,
+    JournalsListComponent,
+    JournalDetailComponent,
     MarkdownListComponent,
     MarkdownDetailComponent,
     InsurancesListComponent,
     InsuranceDetailComponent,
+    
+    CompanytListComponent,
+    CourseListComponent,
+    CourseDetailComponent,
     MdToHtmlPipe
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [ContentfulService],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

@@ -25,6 +25,7 @@ export class ContentTypeListComponent implements OnInit {
   }
 
   goToContentListPage(contentListId: string) {
+    // console.log (contentListId);
     this.router.navigate(['/' + contentListId]);
   }
 }

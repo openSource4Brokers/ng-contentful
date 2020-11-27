@@ -1,5 +1,7 @@
 # ng-contentful
 
+- [Use Contentful](https://be.contentful.com) as your prefered content supplier for all your projects
+
 ## Getting started for developers
 
 - [Install NodeJS](https://nodejs.org/). Hint: eventually install and use [nvm](https://medium.com/@Joachim8675309/installing-node-js-with-nvm-4dc469c977d9) for easy installing and/or switching between node versions
