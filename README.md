@@ -1,5 +1,7 @@
 # ng-contentful
 
+A working [demo](https://contentful.vsoft.be)
+
 [Use Contentful](https://be.contentful.com) as your prefered content supplier for all your projects
 
 [Sebastian Eschweiler Youtube tutorial](https://www.youtube.com/watch?v=KhmjLjvlmyQ) is a good starting point to learn implementing contenful in Angular projects.
@@ -22,16 +24,16 @@
 
 - [bootstrap](https://www.npmjs.com/package/bootstrap): `npm i bootstrap`
 - [contentful](https://www.npmjs.com/package/contentful): `npm i contentful`
-- [marked](https://www.npmjs.com/package/marked): `npm i contentful`
+- [marked](https://www.npmjs.com/package/marked): `npm i marked`
 
-- install all packages in one commandline: `npm i bootstrap contentful`
+- or install all packages with a single instruction: `npm i bootstrap contentful marked`
 
 ## styles.scss
 
 For use of bootstrap, add also into your global styles.scss:
 
 ```bash
-@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "~bootstrap/dist/css/bootstrap.min.css";
 html {
   font-size: 14px;
 }
